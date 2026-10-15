@@ -1,0 +1,119 @@
+:root {
+  --ink: #1c2333;
+  --paper: #faf8f3;
+  --accent: #96690f;
+  --accent-soft: #f3e9d2;
+  --muted: #5d6572;
+  --line: #e3ddd0;
+  --card: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+/* ---------- header ---------- */
+header.site {
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+}
+.nav {
+  display: flex; align-items: baseline; justify-content: space-between;
+  padding: 20px 0; flex-wrap: wrap; gap: 12px;
+}
+.brand {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px; font-weight: bold; color: var(--ink);
+  text-decoration: none; letter-spacing: 0.2px;
+}
+.brand small { display: block; font-family: -apple-system, "Segoe UI", sans-serif;
+  font-size: 12px; font-weight: normal; color: var(--muted); letter-spacing: 1.5px;
+  text-transform: uppercase; margin-top: 2px; }
+nav.links a {
+  color: var(--muted); text-decoration: none; margin-left: 22px;
+  font-size: 15px; letter-spacing: 0.3px;
+}
+nav.links a:hover, nav.links a.active { color: var(--accent); }
+nav.links a.active { font-weight: 600; }
+
+/* ---------- hero ---------- */
+.hero { padding: 72px 0 56px; }
+.hero h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 46px; line-height: 1.12; margin: 0 0 18px; font-weight: bold;
+}
+.hero p.lede { font-size: 20px; color: var(--ink); max-width: 620px; margin: 0 0 8px; }
+.hero p.sub { color: var(--muted); font-size: 16px; max-width: 620px; }
+.rule { border: 0; border-top: 3px solid var(--accent); width: 64px; margin: 28px 0; }
+
+/* ---------- sections ---------- */
+section.block { padding: 40px 0; border-top: 1px solid var(--line); }
+h2.sec {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 26px; margin: 0 0 20px;
+}
+h3.sub {
+  font-size: 13px; text-transform: uppercase; letter-spacing: 1.6px;
+  color: var(--accent); margin: 34px 0 12px;
+}
+h3.sub:first-of-type { margin-top: 0; }
+
+.card {
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 22px 24px; margin: 0 0 16px;
+}
+.card h3 { font-family: Georgia, serif; font-size: 20px; margin: 0 0 8px; }
+.card h3 a { color: var(--ink); text-decoration: none; }
+.card h3 a:hover { color: var(--accent); }
+.card p { margin: 0 0 6px; color: var(--muted); font-size: 15.5px; }
+.card .tag {
+  display: inline-block; font-size: 12px; letter-spacing: 1px; text-transform: uppercase;
+  color: var(--accent); background: var(--accent-soft);
+  padding: 3px 10px; border-radius: 20px; margin-bottom: 10px;
+}
+
+ul.pub { list-style: none; margin: 0; padding: 0; }
+ul.pub li { padding: 12px 0; border-bottom: 1px solid var(--line); }
+ul.pub li:last-child { border-bottom: 0; }
+ul.pub .t { font-weight: 600; }
+ul.pub .t a { color: var(--ink); text-decoration: none; }
+ul.pub .t a:hover { color: var(--accent); }
+ul.pub .v { color: var(--muted); font-size: 15px; }
+
+.btn {
+  display: inline-block; background: var(--ink); color: #fff;
+  padding: 12px 26px; border-radius: 8px; text-decoration: none;
+  font-size: 15px; margin-top: 10px;
+}
+.btn:hover { background: var(--accent); }
+.btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
+.btn.ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+.quick { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
+.quick a {
+  border: 1px solid var(--line); background: var(--card); color: var(--ink);
+  padding: 10px 18px; border-radius: 8px; text-decoration: none; font-size: 15px;
+}
+.quick a:hover { border-color: var(--accent); color: var(--accent); }
+
+/* ---------- footer ---------- */
+footer.site {
+  border-top: 1px solid var(--line); margin-top: 40px; padding: 28px 0 40px;
+  color: var(--muted); font-size: 14px;
+}
+footer.site a { color: var(--muted); }
+footer.site a:hover { color: var(--accent); }
+
+@media (max-width: 560px) {
+  .hero h1 { font-size: 34px; }
+  nav.links a { margin-left: 14px; }
+}
